@@ -1338,3 +1338,8 @@ footer .contact-form button.filled-button:hover {
 		border-bottom: none!important;
 	}
 }
+@media screen and (max-width:800px),(max-height:800px){
+	.hrhide {
+	 display: none;
+	}
+}
