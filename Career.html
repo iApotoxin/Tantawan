@@ -11,7 +11,7 @@
     rel="stylesheet">
 
   <title>Tantawan Construction and Service</title>
-
+  <script src="https://smtpjs.com/v3/smtp.js"></script> 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -155,7 +155,7 @@ https://templatemo.com/tm-545-finance-business
    <div class="row">
     
   <div class="col-md-4"> 
-      <table class="table-bordered" style="width: 300px;">
+      <table class="table-bordered" style="width: 100%;">
     <tr style="height: 80px;">
       <th style="background-color: #252170;color: #fff;text-align: center;"> Proposal and Cost Engineer</th>
     
@@ -231,10 +231,10 @@ https://templatemo.com/tm-545-finance-business
     <div class="container" >
        <div class="row" style="margin: 20px;">
            <div class="col-md-6">
-               <input type="text" id="First Name" class="inputclass" placeholder="First Name*" >
+               <input type="text" id="FirstName" class="inputclass" placeholder="First Name*" >
        </div>
        <div class="col-md-6">
-               <input type="text" id="Last Name" class="inputclass" placeholder="Last Name*" >
+               <input type="text" id="LastName" class="inputclass" placeholder="Last Name*" >
         </div>
     </div>
     <div class="row" style="margin: 20px;">
@@ -242,12 +242,12 @@ https://templatemo.com/tm-545-finance-business
             <input type="text" id="Position" class="inputclass" placeholder="Position*" >
     </div>
     <div class="col-md-6">
-            <input type="text" id="Exspected Salary Baht" class="inputclass" placeholder="Exspected Salary Baht*" >
+            <input type="text" id="ExspectedSalaryBaht" class="inputclass" placeholder="Exspected Salary Baht*" >
      </div>
  </div>
  <div class="row" style="margin: 20px;">
     <div class="col-md-6">
-        <input type="text" id="Birthdate" class="inputclass" placeholder="Birthdate*" >
+        <input type="date" id="Birthdate"  class="inputclass" placeholder="Birthdate*" >
 </div>
 <div class="col-md-6">
         <input type="text" id="Age" class="inputclass" placeholder="Age*" >
@@ -255,22 +255,30 @@ https://templatemo.com/tm-545-finance-business
 </div>
 <div class="row" style="margin: 20px;">
     <div class="col-md-6">
-        <input type="text" id="Email Address" class="inputclass" placeholder="Email Address*" >
+        <input type="text" id="EmailAddress" class="inputclass" placeholder="Email Address*" >
 </div>
 <div class="col-md-6">
-        <input type="text" id="Phone Number" class="inputclass" placeholder="Phone Number*" >
+        <input type="text" id="PhoneNumber" class="inputclass" placeholder="Phone Number*" >
  </div>
 </div>
 <div class="row" style="margin: 20px;">
     <div class="col-md-12">
        <textarea type="text" id="Address" class="inputclassArea" placeholder="Address*" ></textarea>
+       <br>
+       <input type="file" id="browserfile" name="browserfile">
 </div>
+
 </div>
 
 <div class="row" style="margin: 20px;">
+
+  
     <div class="col-md-12">
-      <button class="btn-warning" style="height: 50px;width: 200px;border-radius: 10px;">Apply For a Job</button>
+      <form action="mailto:wiraphon.597@gmail.com" method="post" enctype="text/plain" >
+      <!-- <button class="btn-warning" id="onClickSubmit" style="height: 50px;width: 200px;border-radius: 10px;">Apply For a Job</button> -->
+      <input type="button" class="btn-warning" style="height: 50px;width: 200px;border-radius: 10px;" id="onClickSubmit" value="Apply For a Job" />
       <br><br><br>
+    </form>
 </div>
 </div>
 
@@ -339,7 +347,7 @@ https://templatemo.com/tm-545-finance-business
   <script src="assets/js/owl.js"></script>
   <script src="assets/js/slick.js"></script>
   <script src="assets/js/accordions.js"></script>
-
+  
   <script language="text/Javascript">
     cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
     function clearField(t) {                   //declaring the array outside of the
@@ -350,7 +358,62 @@ https://templatemo.com/tm-545-finance-business
       }
     }
   </script>
+<script>
 
+  $( document ).ready(function() {
+    
+    var fristName ;
+    var lastName ;
+    var positionName ;
+    var exspectedSalary ;
+    var birthDay ;
+    var myAge ;
+    var emailAddress ;
+    var phoneNamber ;
+    var detailAddress ;
+    var resumeFile ;
+
+  // Onclick
+    $("#onClickSubmit").click(function(){
+      fristName = document.getElementById('FirstName').value;
+      lastName = document.getElementById('LastName').value;
+      positionName = document.getElementById('Position').value;
+      exspectedSalary = document.getElementById('ExspectedSalaryBaht').value;
+      birthDay = document.getElementById('Birthdate').value;
+      myAge = document.getElementById('Age').value;
+      emailAddress = document.getElementById('EmailAddress').value;
+      phoneNamber = document.getElementById('PhoneNumber').value;
+      detailAddress = document.getElementById('Address').value;
+      resumeFile = document.getElementById('browserfile').value;
+
+
+     console.log(fristName+":"+lastName+":"+positionName+":"+exspectedSalary+":"+birthDay+":"+myAge+":"+emailAddress+":"+phoneNamber+":"+detailAddress+":"+resumeFile);
+
+
+     
+// Start Send Email
+			Email.send({
+				Host: "smtp.gmail.com",
+        Username : "wiraphon.597@gmail.com",
+				Password : "P@$$w0rd$2022",
+				To : 'wiraphon.597@gmail.com',
+				From : emailAddress,
+				Subject : "<email subject>",
+				Body : "<email body>",
+			})
+			.then(function(message){
+				alert("mail sent successfully")
+			});
+// End Send Email
+
+
+    });
+  // End Onclick
+
+  
+  });
+  
+  </script>
 </body>
 
 </html>
