@@ -1360,3 +1360,15 @@ footer .contact-form button.filled-button:hover {
 	margin-top: 40px;
 	}
 }
+@media screen and (min-width:800px),(min-height:800px){
+	.LogoBig {
+	
+	width: 100%;
+	}
+}
+@media screen and (max-width:800px),(max-height:800px){
+	.Logosmall {
+	height: 80px;
+	width: 80px;
+	}
+}
