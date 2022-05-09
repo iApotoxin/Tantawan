@@ -1350,3 +1350,13 @@ footer .contact-form button.filled-button:hover {
 	 display: none;
 	}
 }
+@media screen and (max-width:800px),(max-height:800px){
+	.namehide {
+	font-size: small;
+	}
+}
+@media screen and (max-width:800px),(max-height:800px){
+	.addMargintop {
+	margin-top: 40px;
+	}
+}
