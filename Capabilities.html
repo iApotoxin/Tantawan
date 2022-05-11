@@ -71,7 +71,9 @@ https://templatemo.com/tm-545-finance-business
         ga('send', 'pageview');
     </script>
 <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/48/12/intl/th_ALL/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/48/12/intl/th_ALL/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/48/12/intl/th_ALL/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/48/12/intl/th_ALL/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/48/12/intl/th_ALL/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/48/12/intl/th_ALL/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/48/12/intl/th_ALL/controls.js"></script></head>
-
+<style>
+  
+  </style>
 <body onload="onLoadMap(6,3)">
 
 
@@ -143,7 +145,7 @@ https://templatemo.com/tm-545-finance-business
       </div>
     </nav>
 <!-- Page Content -->
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Scroll Up</button>
 <!-- Section 1 Start  -->
 <div class="row addMargintop">
     <div class="container">
@@ -713,4 +715,25 @@ https://templatemo.com/tm-545-finance-business
     }
   }
 </script>
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
 </body></html>
