@@ -181,9 +181,8 @@ https://templatemo.com/tm-545-finance-business
     <h4 > <span style="color:black;">Qualification:</span></h4>       
 <br>
 </div>
-
-    <div id="Proposal" class="">
-      <ul class="menu-list" style="font-size:large; color: black;" >
+    <div >
+      <ul id="DisableWhenclick" class="menu-list" style="font-size:large; color: black;" >
         <li>• Thai national, age 25-40 years old</li>
         <li>• At least 3 years’ experience in oil & gas and chemical, refinery plant industries.</li>
         <li>• Bachelor Degree in engineering or related field.</li>
@@ -191,20 +190,22 @@ https://templatemo.com/tm-545-finance-business
         <li>• Good knowledge in bidding, proposal, costing, budgeting, insurance,capital interest, import duty and taxes.</li>
         <li>• Flexibility to travel and work in multiple locations</li>
       </ul> 
-    </div>
-    
-    <div id="Civil" class="tabcontent">
-      <ul class="menu-list" style="font-size:large; color: black;" >
+      <ul id="Proposal" class="menu-list tabcontent" style="font-size:large; color: black;" >
+        <li>• Thai national, age 25-40 years old</li>
+        <li>• At least 3 years’ experience in oil & gas and chemical, refinery plant industries.</li>
+        <li>• Bachelor Degree in engineering or related field.</li>
+        <li>• Good command in English.</li>
+        <li>• Good knowledge in bidding, proposal, costing, budgeting, insurance,capital interest, import duty and taxes.</li>
+        <li>• Flexibility to travel and work in multiple locations</li>
+      </ul> 
+      <ul id="Civil" class="menu-list tabcontent" style="font-size:large; color: black;" >
         <li>• Thai national, age 25-40 years old.</li>
         <li>• At least 3 years’ experience in oil &amp; gas and chemical, refinery plant industries.</li>
         <li>• Bachelor Degree in Civil or Structural Engineering or related field.</li>
         <li>• Good command in English.</li>
         <li>• Flexibility to travel and work in multiple locations</li>
       </ul>
-    </div>
-    
-    <div id="Draftsman" class="tabcontent">
-      <ul class="menu-list" style="font-size:large; color: black;" >
+      <ul  id="Draftsman" class="menu-list tabcontent" style="font-size:large; color: black;" >
         <li>• เพศชาย เพศหญิง อายุ24 ปีขึ้นไป</li><li>การศึกษาวุฒิ ปวช ปวส. สาขาเทคนิคการเขียนแบบ</li>
         <li>• สามารถใช้โปรแกรม Auto cad / CD3 Max / Photoshop / Sketch up / ได้เป็นอย่างดีและสามารถใช้คอมพิวเตอร์ ช่วยในการเขียนแบบ 2 และ 3 มิติได้</li>
         <li>• มีความรับผิดชอบและกระตือรือร้นในการทำงาน</li>
@@ -214,6 +215,8 @@ https://templatemo.com/tm-545-finance-business
         <li>• สามารถปฏิบัติงานต่างจังหวัดได้จะพิจารณาเป็นพิเศษ</li>
       </ul>
     </div>
+    
+  
     
   
 </div>
@@ -468,6 +471,10 @@ https://templatemo.com/tm-545-finance-business
     function openCity(evt, cityName) {
       var element = document.getElementById("Proposal");
       element.classList.add("tabcontent");
+    
+      var DisableWhenclick = document.getElementById("DisableWhenclick");
+      DisableWhenclick.classList.add("hiddenTab");
+
 
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
