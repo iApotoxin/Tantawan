@@ -1372,6 +1372,11 @@ footer .contact-form button.filled-button:hover {
 	width: 80px;
 	}
 }
+@media screen and (max-width:800px),(max-height:800px){
+	.textalign {
+		padding-left: 60px;
+	}
+}
 
   
 #myBtn {
