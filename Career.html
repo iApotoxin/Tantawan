@@ -155,19 +155,19 @@ https://templatemo.com/tm-545-finance-business
 <div class="row">
   <div class="container">
    <div class="row">
-    
+   
   <div class="col-md-4"> 
       <table class="table-bordered" style="width: 100%;">
     <tr style="height: 80px;">
-      <th style="background-color: #252170;color: #fff;text-align: center;"> Proposal and Cost Engineer</th>
+      <th style="background-color: #252170;color: #fff;text-align: center;" class="tablinks btn-info" onclick="openCity(event, 'Proposal')">Proposal and Cost Engineer</th>
     
     </tr>
-    <tr style="height: 80px;text-align: center;">
-      <td>Civil Engineer</td>
+    <tr style="height: 80px;text-align: center;" class="tablinks" >
+      <th  style="background-color: #252170;color: #fff;text-align: center;" class="tablinks btn-info" onclick="openCity(event, 'Civil')">Civil Engineer</th>
       
     </tr>
-    <tr style="height: 80px;text-align: center;">
-      <td>Draftsman</td>
+    <tr style="height: 80px;text-align: center;"class="tablinks">
+      <th style="background-color: #252170;color: #fff;text-align: center;" class="tablinks btn-info" onclick="openCity(event, 'Draftsman')">Draftsman</th>
       
     </tr>
   </table></div> 
@@ -181,14 +181,41 @@ https://templatemo.com/tm-545-finance-business
     <h4 > <span style="color:black;">Qualification:</span></h4>       
 <br>
 </div>
-    <ul class="menu-list" style="font-size:large; color: black;" >
-      <li>• Thai national, age 25-40 years old</li>
-      <li>• At least 3 years’ experience in oil & gas and chemical, refinery plant industries.</li>
-      <li>• Bachelor Degree in engineering or related field.</li>
-      <li>• Good command in English.</li>
-      <li>• Good knowledge in bidding, proposal, costing, budgeting, insurance,capital interest, import duty and taxes.</li>
-      <li>• Flexibility to travel and work in multiple locations</li>
-    </ul> 
+
+    <div id="Proposal" class="">
+      <ul class="menu-list" style="font-size:large; color: black;" >
+        <li>• Thai national, age 25-40 years old</li>
+        <li>• At least 3 years’ experience in oil & gas and chemical, refinery plant industries.</li>
+        <li>• Bachelor Degree in engineering or related field.</li>
+        <li>• Good command in English.</li>
+        <li>• Good knowledge in bidding, proposal, costing, budgeting, insurance,capital interest, import duty and taxes.</li>
+        <li>• Flexibility to travel and work in multiple locations</li>
+      </ul> 
+    </div>
+    
+    <div id="Civil" class="tabcontent">
+      <ul class="menu-list" style="font-size:large; color: black;" >
+        <li>• Thai national, age 25-40 years old.</li>
+        <li>• At least 3 years’ experience in oil &amp; gas and chemical, refinery plant industries.</li>
+        <li>• Bachelor Degree in Civil or Structural Engineering or related field.</li>
+        <li>• Good command in English.</li>
+        <li>• Flexibility to travel and work in multiple locations</li>
+      </ul>
+    </div>
+    
+    <div id="Draftsman" class="tabcontent">
+      <ul class="menu-list" style="font-size:large; color: black;" >
+        <li>• เพศชาย เพศหญิง อายุ24 ปีขึ้นไป</li><li>การศึกษาวุฒิ ปวช ปวส. สาขาเทคนิคการเขียนแบบ</li>
+        <li>• สามารถใช้โปรแกรม Auto cad / CD3 Max / Photoshop / Sketch up / ได้เป็นอย่างดีและสามารถใช้คอมพิวเตอร์ ช่วยในการเขียนแบบ 2 และ 3 มิติได้</li>
+        <li>• มีความรับผิดชอบและกระตือรือร้นในการทำงาน</li>
+        <li>• มีประสบการณ์งานทางด้าน Construction Oil &amp; Gas จะได้รับการพิจารณาเป็นพิเศษ</li>
+        <li>• มีความกระตือรือร้น คล่องแคล่ว มีความคิดสร้างสรรค์</li>
+        <li>• มีระเบียนวินัย ซื่อสัตย์ ขยันอดทน ตรงต่อเวลาและมีความรับผิดชอบต่อหน้าที่</li>
+        <li>• สามารถปฏิบัติงานต่างจังหวัดได้จะพิจารณาเป็นพิเศษ</li>
+      </ul>
+    </div>
+    
+  
 </div>
 </div>
   <div>
@@ -435,6 +462,24 @@ https://templatemo.com/tm-545-finance-business
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
+    }
+    </script>
+   <script>
+    function openCity(evt, cityName) {
+      var element = document.getElementById("Proposal");
+      element.classList.add("tabcontent");
+
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
     }
     </script>
 </body>
