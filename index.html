@@ -65,9 +65,10 @@ https://templatemo.com/tm-545-finance-business
   <header class="">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <h2 style="color:#fff;">Tantawan Construction and Service</h2>
-        </a>
+        <a class="navbar-brand namehide" href="index.html" >
+          <div >
+            <h2 style="color: white;" >  <img src="assets/Pic/logoMenu.png" class="center-block" alt="" height="60px" width="60px" style="margin-right: 30px;margin-top: -20px;"><span class="namehide">Tantawan Construction and Service</span> </h2>
+          </div> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -75,7 +76,7 @@ https://templatemo.com/tm-545-finance-business
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" style="color: #fff;" href="#top">Home
+              <a class="nav-link" style="color: #fff;" href="">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -83,13 +84,13 @@ https://templatemo.com/tm-545-finance-business
               <a class="nav-link" style="color: #fff;" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: #fff;" href="services.html">Capabilities</a>
+              <a class="nav-link" style="color: #fff;" href="Capabilities.html">Capabilities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: #fff;"  href="">Career</a>
+              <a class="nav-link" style="color: #fff;"   href="Customer List.html">Customer List</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="color: #fff;" href="contact.html">Contact Us</a>
+              <a class="nav-link" style="color: #fff;" href="Career.html">Career</a>
             </li>
           </ul>
         </div>
@@ -98,16 +99,29 @@ https://templatemo.com/tm-545-finance-business
   </header>
 
   <!-- Page Content -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Scroll Up</button>
   <!-- Banner Starts Here -->
-  <div class="main-banner header-text" id="top">
+
+  
+  <div class="main-banner header-text addMargintop" id="top">
     <div class="Modern-Slider">
       <!-- Item -->
       <div class="item item-1">
         <div class="img-fill">
+         <div class="row hrhide" style="margin-top: 170px;">
+          
+          <div class="col-md-3"> 
+            <hr style="width:100%;height: 5px;background-color: #FFC631;">
+            <!-- <img src="assets/Pic/dash.png">  -->
+          </div>
+          <div class="col-md-9" style="text-align: left;padding-top: 8px;">  <span style="color: #fff;text-align: left;">Company Infomation - Tantawancorp.co.th</span> </div>
+          </div>
+          <br>  
           <div class="text-content">
+            
             <h4>Exceptional</h4>
             <h4>Service Exceeding</h4>
-            <h4>Expectations</h4>
+            <h4>Expectations</h4> 
             <p>Our civil and structural team am is commit knitted to providing Borturabie, creative & efficient
               engineering solutions</p>
             <a href="contact.html" class="filled-button">CONSULT NOW</a>
@@ -150,7 +164,7 @@ https://templatemo.com/tm-545-finance-business
             </ul>
           </div>
           <div class="col-md-8">
-            <img src="assets/Pic/Wellhead2.png" style="width: 100%;" alt="">
+            <img src="assets/Pic/Wellhead2.png" style="width: 100%;padding-right: 20px;align-items: center;" alt="">
           </div>
         </div>
       </div>
@@ -241,7 +255,7 @@ https://templatemo.com/tm-545-finance-business
     <div class="container">
       <div class="row">
         <div class="col-md-3 footer-item"  >
-          <img src="assets/Pic/Logo.png" style="width: 100%;">
+          <img class="Logosmall LogoBig" src="assets/Pic/Logo.png" >
        </div>
         <div class="col-md-3 footer-item">
           <h4 style="color:#FFC631;">Contacts</h4>
@@ -305,7 +319,27 @@ https://templatemo.com/tm-545-finance-business
       }
     }
   </script>
-
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
 </body>
 
 </html>
