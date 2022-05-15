@@ -1360,24 +1360,24 @@ footer .contact-form button.filled-button:hover {
 	margin-top: 40px;
 	}
 }
-@media screen and (min-width:830px),(min-height:1200px){
+@media screen and (min-width:830px){
 	.LogoBig {
 	
 	width: 100%;
 	}
 }
-@media screen and  (max-width:830px),(max-height:1200px){
+@media screen and  (max-width:830px){
 	.Logosmall {
 	height: 80px;
 	width: 80px;
 	}
 }
-@media screen and (max-width:800px),(max-height:800px){
+@media screen and (max-width:800px){
 	.textalign {
 		padding-left: 60px;
 	}
 }
-@media screen and (max-width:830px),(max-height:1200px){
+@media screen and (max-width:830px){
 	.Navminscreen {
 		padding-top: 35px;
 	}
