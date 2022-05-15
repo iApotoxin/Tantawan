@@ -1355,18 +1355,18 @@ footer .contact-form button.filled-button:hover {
 	font-size: small;
 	}
 }
-@media screen and (max-width:800px),(max-height:800px){
+@media screen and  (max-width:830px),(max-height:1200px){
 	.addMargintop {
 	margin-top: 40px;
 	}
 }
-@media screen and (min-width:800px),(min-height:800px){
+@media screen and (min-width:830px),(min-height:1200px){
 	.LogoBig {
 	
 	width: 100%;
 	}
 }
-@media screen and (max-width:800px),(max-height:800px){
+@media screen and  (max-width:830px),(max-height:1200px){
 	.Logosmall {
 	height: 80px;
 	width: 80px;
@@ -1377,6 +1377,12 @@ footer .contact-form button.filled-button:hover {
 		padding-left: 60px;
 	}
 }
+@media screen and (max-width:830px),(max-height:1200px){
+	.Navminscreen {
+		padding-top: 35px;
+	}
+}
+
 /* Style the tab */
 .tab {
 	overflow: hidden;
