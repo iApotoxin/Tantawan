@@ -1355,7 +1355,7 @@ footer .contact-form button.filled-button:hover {
 	font-size: small;
 	}
 }
-@media screen and  (max-width:830px),(max-height:1200px){
+@media screen and  (max-width:830px){
 	.addMargintop {
 	margin-top: 40px;
 	}
